@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cow</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #cow {
+        font-size: 10vw;
+        transition: transform 30s ease-in-out;
+      }
+	  
+      @media (prefers-color-scheme: dark) {
+           body {
+             background-color: black;
+           }
+         }
+    </style>
+  </head>
+  <body>
+    <div id="cow">&#x1F42E;</div>
+    <script>
+      window.onload = function() {
+        var cow = document.getElementById("cow");
+        var scale = Math.max(window.innerWidth / cow.offsetWidth, window.innerHeight / cow.offsetHeight);
+        cow.style.transform = "scale(" + scale + ")";
+      };
+    </script>
+  </body>
+</html>
